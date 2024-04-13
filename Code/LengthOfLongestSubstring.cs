@@ -7,28 +7,29 @@ public class Solution
         int max = 0;
         int startPoint = 0;
         int counter = 0;
-        var sb = new StringBuilder();
+        var hashTable = new Dictionary<char, int>();
 
         for (int i = 0; i <= s.Length - 1; i++)
         {
-            sb.Append(s[i]);
-            counter++;
+            hashTable.Add(s[i], i);
+            counter ++;
+
             if(i == s.Length - 1)
             {
-                max = counter > max ? counter : max;
                 break;
             }
 
-            if (sb.ToString().Contains(s[i + 1].ToString()))
+            if (!hashTable.ContainsKey(s[i + 1]))
             {
-                max = counter > max ? counter : max;
+                max = Math.Max(counter, max);
                 i = startPoint;
-                startPoint++;
+                startPoint ++;
                 counter = 0;
-                sb.Clear();
+                hashTable.Clear();
             }
         }
 
+        max = Math.Max(counter, max);
         return max;
     }
 }
