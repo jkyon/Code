@@ -13,7 +13,6 @@ public class Solution
 {
     public ListNode AddTwoNumbers(ListNode l1, ListNode l2) 
     {
-        var stop = false;
         var pointer1 = l1;
         var pointer2 = l2;
 
@@ -21,17 +20,8 @@ public class Solution
         var resultPointer = resultHead;
         var leftOver = 0;
 
-        while(!stop)
+        while(pointer1 != null || pointer2 != null)
         {
-           
-            if (pointer1 == null && pointer2 == null)
-            {
-                if(leftOver > 0) 
-                {
-                    BuildResult(leftOver, resultPointer);
-                }
-                break;
-            }
 
             var value1 = pointer1 != null ? pointer1.val : 0;
             var value2 = pointer2 != null ? pointer2.val : 0;
@@ -42,7 +32,12 @@ public class Solution
 
             pointer1 = pointer1?.next;
             pointer2 = pointer2?.next;
-           
+        
+        }
+
+        if(leftOver > 0) 
+        {
+            BuildResult(leftOver, resultPointer);
         }
 
         return resultHead;

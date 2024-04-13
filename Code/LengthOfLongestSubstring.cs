@@ -26,7 +26,6 @@ public class Solution
                 startPoint++;
                 counter = 0;
                 sb.Clear();
-                continue;
             }
         }
 
