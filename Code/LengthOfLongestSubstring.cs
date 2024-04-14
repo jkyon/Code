@@ -9,24 +9,19 @@ public class Solution
         int counter = 0;
         var hashTable = new Dictionary<char, int>();
 
-        for (int i = 0; i <= s.Length - 1; i++)
+        for (int i = 0; i < s?.Length; i++)
         {
-            hashTable.Add(s[i], i);
-            counter ++;
-
-            if(i == s.Length - 1)
-            {
-                break;
-            }
-
-            if (!hashTable.ContainsKey(s[i + 1]))
+            if (hashTable.ContainsKey(s[i]))
             {
                 max = Math.Max(counter, max);
                 i = startPoint;
                 startPoint ++;
                 counter = 0;
                 hashTable.Clear();
+                continue;
             }
+            hashTable.Add(s[i], i);
+            counter ++;
         }
 
         max = Math.Max(counter, max);
