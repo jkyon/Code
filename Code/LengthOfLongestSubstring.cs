@@ -10,15 +10,15 @@ public class Solution
 
         for (int i = 0; i < s?.Length; i++)
         {
-            if (hashTable.ContainsKey(s[i]))
+            if (!hashTable.ContainsKey(s[i]))
             {
-                startPoint++;
-                hashTable[s[i]] = i;
-                counter = Math.Max(counter, i - startPoint +  1);
+                hashTable.Add(s[i], i);
+                counter = Math.Max(counter, i + 1 - startPoint);
                 continue;
             }
-            hashTable.Add(s[i], i);
-            counter = Math.Max(counter, i - startPoint +  1);
+            startPoint = Math.Max(hashTable[s[i]] + 1, startPoint);
+            counter = Math.Max(counter, i +  1 - startPoint);
+            hashTable[s[i]] = i;
         }
 
         return counter;
