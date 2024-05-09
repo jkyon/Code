@@ -26,4 +26,22 @@
 
         return cache[i];
     }
+
+    public int ClimbStairsImproved(int n) 
+    {
+        var pointer1 = 1;
+        var pointer2 = 1;
+        var i = 0;
+        while(i < (n - 1))
+        {
+            var curr = pointer1 + pointer2;
+            pointer2 = pointer1;
+            pointer1 = curr;
+            i++;
+        }
+
+        return pointer1;
+    }
+
+
 }
