@@ -4,7 +4,7 @@
     {
         var left = 0;
         var right = nums.Length - 1;
-        int result;
+        var result = -1;
         
         if (nums[right] > nums[left] || nums[right] == nums[left])
         {
@@ -25,20 +25,17 @@
             result = Array.BinarySearch(nums, left, Math.Abs(right - left) + 1, target);
             return result >= 0 ? result : -1;
         }
-        else
-        {
-
-            right = pivot;
-            result = Array.BinarySearch(nums, left, right + 1, target);
-            return result >= 0 ? result : -1;
-        }
+        
+        right = pivot;
+        result = Array.BinarySearch(nums, left, right + 1, target);
+        return result >= 0 ? result : -1;
     }
 
     int FindPivot(int[] nums)
     {
         var left = 0;
         var right = nums.Length - 1;
-        var middle = (left + right) / 2;
+        var middle = right / 2;
         while (nums[middle + 1] > nums[middle])
         {
             if(nums[right] < nums[middle])
