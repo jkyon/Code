@@ -1,4 +1,6 @@
-﻿public class Solution 
+﻿namespace Code;
+
+public class ThreeSumCloset 
 {
     public int ThreeSumClosest(int[] nums, int target) 
     {

@@ -1,4 +1,6 @@
-﻿public class Solution 
+﻿namespace Code;
+
+public class MaxSubArraySolution 
 {
     public int MaxSubArray(int[] nums) 
     {

@@ -1,4 +1,6 @@
-﻿public class Pascal {
+﻿namespace Code;
+
+public class Pascal {
     public IList<IList<int>> Generate(int numRows) 
     {
         var resultSet = new List<IList<int>>();

@@ -1,4 +1,6 @@
-﻿public class Solution 
+﻿namespace Code;
+
+public class Climb 
 {
     public int ClimbStairs(int n) 
     {

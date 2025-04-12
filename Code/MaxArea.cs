@@ -1,4 +1,6 @@
-﻿public class Solution {
+﻿namespace Code;
+
+public class MaxAreaSolution {
     public int MaxArea(int[] height)
     {
         var maxArea = 0;

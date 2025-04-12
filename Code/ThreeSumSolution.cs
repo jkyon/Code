@@ -1,4 +1,6 @@
-﻿public class Solution {
+﻿namespace Code;
+
+public class ThreeSumSolution {
     public IList<IList<int>> ThreeSum(int[] nums) 
     {
         Array.Sort(nums);

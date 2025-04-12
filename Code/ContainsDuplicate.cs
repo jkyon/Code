@@ -1,18 +1,21 @@
-﻿public class Solution 
+﻿namespace Code
 {
-    public bool ContainsDuplicate(int[] nums) 
+    public class ContainsDupSolution 
     {
-        var hashSet = new HashSet<int>();
-
-        foreach (var num in nums)
+        public bool ContainsDuplicate(int[] nums) 
         {
-            if(hashSet.Contains(num))
-            {
-                return true;
-            }
-            hashSet.Add(num);
-        }     
+            var hashSet = new HashSet<int>();
 
-        return false;
+            foreach (var num in nums)
+            {
+                if(hashSet.Contains(num))
+                {
+                    return true;
+                }
+                hashSet.Add(num);
+            }     
+
+            return false;
+        }
     }
-}s
+}

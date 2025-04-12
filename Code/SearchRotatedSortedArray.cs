@@ -1,4 +1,6 @@
-﻿public class Solution 
+﻿namespace Code;
+
+public class RotatedSortedArray 
 {
     public int Search(int[] nums, int target) 
     {

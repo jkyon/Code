@@ -1,4 +1,6 @@
-﻿public class Solution {
+﻿namespace Code;
+
+public class Anagram {
     public bool IsAnagram(string s, string t) 
     {
         if(s.Length != t.Length)

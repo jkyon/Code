@@ -1,4 +1,6 @@
-﻿public class Subsets1 
+﻿namespace Code;
+
+public class Subsets1 
 {
     List<IList<int>> solution = new List<IList<int>>();
 

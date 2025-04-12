@@ -1,17 +1,6 @@
-﻿/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public int val;
- *     public TreeNode left;
- *     public TreeNode right;
- *     public TreeNode(int val=0, TreeNode left=null, TreeNode right=null) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
- */
-public class Solution 
+﻿namespace Code;
+
+public class HasPathSumSolution 
 {
     private int targetSumValue = 0;
     private bool found = false;
@@ -46,6 +35,19 @@ public class Solution
         Travel(node.left, currentSum + node.left?.val ?? 0);
 
         Travel(node.right, currentSum + node.right?.val ?? 0);
+    }
+    
+    public class TreeNode
+    {
+        public int val;
+        public TreeNode left;
+        public TreeNode right;
+        public TreeNode(int val=0, TreeNode left=null, TreeNode right=null) 
+        {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
     }
 
 }

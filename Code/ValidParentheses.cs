@@ -1,4 +1,6 @@
-﻿public class Solution {
+﻿namespace Code;
+
+public class Solution {
     public bool IsValid(string s) 
     {
         var dictionary = new Dictionary<char, char> {

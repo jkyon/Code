@@ -1,4 +1,6 @@
-﻿public class Solution 
+﻿namespace Code;
+
+public class SearchRangeSolution 
 {
     public int[] SearchRange(int[] nums, int target) 
     {

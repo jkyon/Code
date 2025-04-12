@@ -1,4 +1,6 @@
-﻿public class Solution {
+﻿namespace Code;
+
+public class MissingNumberSolution {
     public int MissingNumber(int[] nums) {
         var total = 0;
         var subTotal = 0;

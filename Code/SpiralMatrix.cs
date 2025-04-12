@@ -1,4 +1,6 @@
-﻿public class Solution 
+﻿namespace Code;
+
+public class Spiral 
 {
     public IList<int> SpiralOrder(int[][] matrix) 
     {

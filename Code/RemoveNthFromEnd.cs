@@ -1,15 +1,6 @@
-﻿/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     public int val;
- *     public ListNode next;
- *     public ListNode(int val=0, ListNode next=null) {
- *         this.val = val;
- *         this.next = next;
- *     }
- * }
- */
-public class Solution {
+﻿namespace Code;
+
+public class RemoveNFromEnd {
     public ListNode RemoveNthFromEnd(ListNode head, int n) 
     {
         var pointer1 = head;
@@ -38,4 +29,19 @@ public class Solution {
         pointer1.next = pointer1?.next?.next;
         return head;
     }
+    
+    
+    public class ListNode 
+    {
+    
+        public int val;
+    
+        public ListNode next;
+        public ListNode(int val=0, ListNode next = null) 
+        {
+            this.val = val;
+            this.next = next;
+        }
+    }
+
 }

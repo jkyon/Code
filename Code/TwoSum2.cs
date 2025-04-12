@@ -1,4 +1,6 @@
-﻿public class Solution {
+﻿namespace Code;
+
+public class TwoSum2Solution {
     public int[] TwoSum(int[] numbers, int target) 
     {
         var result = new int[2];

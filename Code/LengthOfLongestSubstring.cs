@@ -1,6 +1,6 @@
-﻿using System.Text;
+﻿namespace Code;
 
-public class Solution
+public class LongestSubstring
 {
     public int LengthOfLongestSubstring(string s) 
     {
